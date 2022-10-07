@@ -21,7 +21,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, windows-2019]
         java: [13]
 
     env:
@@ -67,5 +67,5 @@ jobs:
       - name: Upload m2 artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: m2
+          name: m2-${{ matrix.os }}
           path: ~/.m2/repository/dev/onvoid/webrtc/**
