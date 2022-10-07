@@ -1,7 +1,7 @@
 name: Maven CI
 
 on:
-  create:
+  push:
     tags:
       - 'v*'
 
